@@ -31,8 +31,8 @@ a {
 /* -------------- */
 /* RESPONSIVENESS */
 /* -------------- */
-@media (max-width: 1200) {
-  /* For a screen < 960px, this CSS will be read */
+@media (min-width: 961px) {
+  /* For a screen > 1280px, this CSS will be read */
   .container {
     width: 900px;
   }
@@ -51,9 +51,23 @@ a {
 }
 @media (max-width: 540px) {
   /* For a screen < 540px, this CSS will be read */
+  #intro {
+    flex-direction: column;
+    justify-content: center;
+  }
   .container {
     width: 400px;
   }
+}
+
+/* -- */
+/* ID */
+/* -- */
+
+#intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /* ------- */
@@ -77,11 +91,14 @@ a {
 }
 
 .card-white {
-    background-color: white;
-    padding: 10px 20px 40px;
-    margin: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0.1, .1);
+  background-color: white;
+  padding: 10px 20px 40px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.shadowed {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0.1, .1);
 }
 
 /* BUTTONS */
@@ -92,6 +109,10 @@ a {
   padding: 10px 20px;
   border-radius: 10px;
   margin-top: 20px;
+}
+
+.btn-purple a.hidelink {
+  cursor: pointer;
 }
 
 /* LIST */
